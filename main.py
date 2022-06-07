@@ -5,6 +5,9 @@ class Head:
     eyes = 2
     ears = 2
     mouth = 1
+    teeth = 32
+    def brush_teeth(self):
+        print('Зубы почистил' if random.randint(0, 1) else 'Зубы не почистил, зажевал жвачку')
 
     def eat(self):
         taste = 'Вкусно' if random.randint(0, 1) else 'не вкусно'
