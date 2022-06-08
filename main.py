@@ -20,16 +20,25 @@ class Body:
         sweat_ml = random.randint(10, 1000)
         print(f'выделилось {sweat_ml} мл пота')
 
-class Limbs:   # добавить функции
+class Limbs:
     arms = 2
     feet = 2
+    def dance(self):
+        dancing = 'Бог танца, Мигель отдыхает!' if random.randint(0, 1) else 'Ножками потопали, ручками похлопали!'
+        print(dancing)
 
-class Human(Head, Body, Limbs):   # можно добавить танцевать, гулять (сколько км прошел),ходить на свидание или в бар
+class Human(Head, Body, Limbs):
     def drive(self):
         driving = "Прекрасное вождение- уровень 'Шумахер'" if random.randint(0, 1) else 'Опять лишили прав'
         print(driving)
-
-
+    def walk(self):
+        walking = random.randint(1, 12)
+        print(f'Прошел {walking} км')
 
 
 nick = Human()
+nick.brush_teeth()
+nick.eat()
+nick.dance()
+nick.drive()
+nick.walk()
